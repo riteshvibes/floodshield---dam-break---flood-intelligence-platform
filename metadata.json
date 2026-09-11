@@ -1,0 +1,6 @@
+{
+  "name": "FLOODSHIELD - Dam Break & Flood Intelligence Platform",
+  "description": "Global hydrodynamic dam-break simulation, flood wave propagation, real-time OpenStreetMap infrastructure discovery, and live Open-Meteo meteorological telemetry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,100 @@
+{
+  "model": "RandomForestRegressor",
+  "modelVersion": "demo-v1",
+  "trainingDate": "2026-09-11T18:20:32.308521+00:00",
+  "features": [
+    "rainfall_1h",
+    "rainfall_3h",
+    "rainfall_6h",
+    "rainfall_12h",
+    "rainfall_24h",
+    "previous_discharge_1h",
+    "previous_discharge_3h",
+    "previous_discharge_6h",
+    "previous_water_level",
+    "reservoir_level",
+    "river_level",
+    "elevation",
+    "slope",
+    "soil_moisture"
+  ],
+  "targets": [
+    "future_discharge_1h",
+    "future_discharge_3h",
+    "future_discharge_6h",
+    "future_discharge_12h",
+    "future_discharge_24h"
+  ],
+  "trainingDataset": "backend/ml/data/demo_discharge.csv",
+  "datasetStatus": "SYNTHETIC_DEMO_NOT_HISTORICAL",
+  "records": 61320,
+  "dateRange": {
+    "start": "2019-01-01T00:00:00+00:00",
+    "end": "2025-12-29T23:00:00+00:00"
+  },
+  "split": {
+    "train": 42924,
+    "validation": 9198,
+    "test": 9198,
+    "method": "chronological"
+  },
+  "metrics": {
+    "1": {
+      "mae": 42.3192,
+      "rmse": 58.748,
+      "r2": 0.9986
+    },
+    "3": {
+      "mae": 43.9296,
+      "rmse": 61.0095,
+      "r2": 0.9986
+    },
+    "6": {
+      "mae": 45.2118,
+      "rmse": 62.7893,
+      "r2": 0.9986
+    },
+    "12": {
+      "mae": 46.5118,
+      "rmse": 64.6005,
+      "r2": 0.9986
+    },
+    "24": {
+      "mae": 47.3619,
+      "rmse": 65.7687,
+      "r2": 0.9986
+    }
+  },
+  "testAgreementPercent": {
+    "1": 99.86,
+    "3": 99.86,
+    "6": 99.86,
+    "12": 99.86,
+    "24": 99.86
+  },
+  "metricWarning": "Agreement percentage is R-squared multiplied by 100 on the chronological unseen test split; it is not classification accuracy or probability of truth.",
+  "evaluationType": "SYNTHETIC_OFFLINE_BENCHMARK_NOT_REAL_TIME_ACCURACY",
+  "featureImportance": {
+    "rainfall_1h": 0.000116,
+    "rainfall_3h": 0.000103,
+    "rainfall_6h": 0.000115,
+    "rainfall_12h": 0.000113,
+    "rainfall_24h": 0.000115,
+    "previous_discharge_1h": 0.399742,
+    "previous_discharge_3h": 7e-05,
+    "previous_discharge_6h": 0.447212,
+    "previous_water_level": 0.137379,
+    "reservoir_level": 6.7e-05,
+    "river_level": 0.014879,
+    "elevation": 0.0,
+    "slope": 0.0,
+    "soil_moisture": 8.9e-05
+  },
+  "severityModel": null,
+  "dataSources": [
+    "Seven-year deterministic synthetic fixture anchored to the public Machchhu-II 1979 peak-flow benchmark"
+  ],
+  "historicalCoverageYears": 6.995,
+  "requiredCoverageYears": 5,
+  "provenance": "Seven-year deterministic synthetic research fixture anchored to the public Machchhu-II 1979 peak-flow benchmark; not measured gauge observations."
+}

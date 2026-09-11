@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+	font-family: 'Manrope', ui-sans-serif, sans-serif;
+	color-scheme: dark;
+	background: #070b14;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+}
+
+html,
+body,
+#root {
+	min-height: 100%;
+	margin: 0;
+}
+
+body {
+	background:
+		radial-gradient(circle at 85% -10%, rgba(14, 116, 144, 0.16), transparent 28rem),
+		radial-gradient(circle at 10% 110%, rgba(30, 64, 175, 0.12), transparent 32rem),
+		#070b14;
+}
+
+button,
+input {
+	font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible {
+	outline: 2px solid #22d3ee;
+	outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #080d1a;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #26344d;
+	border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #385273;
+}
